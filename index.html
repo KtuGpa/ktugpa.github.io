@@ -2,39 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta property="og:title" content="KTU 2024 Scheme GPA Calculator">
-  <meta property="og:description" content="Calculate SGPA/CGPA for KTU 2024 Scheme easily. Group-wise support included.">
+  <meta property="og:title" content="KTU 2024 SCHEME SGPA / CGPA CALCULATOR">
+  <meta property="og:description" content="Easily calculate your SGPA/CGPA for the 2024 KTU Scheme.">
   <meta property="og:url" content="https://ktugpa.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://ktugpa.github.io/KTU2024Scheme/assets/preview.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KTU 2024 Scheme GPA Calculator</title>
+  <title>KTU 2024 SCHEME SGPA / CGPA CALCULATOR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
       font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 50px;
+      padding: 20px;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .scheme-select {
       margin-bottom: 20px;
     }
-    a.button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
+    .scheme-select select {
+      padding: 10px;
       font-size: 1rem;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
+      border: none;
+      outline: none;
+      color: #333;
     }
-    a.button:hover {
-      background-color: #45a049;
+    .enter-button {
+      padding: 14px 28px;
+      background-color: #ffffff;
+      color: #00aaff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .enter-button:hover {
+      background-color: #e0e0e0;
+      color: #0077cc;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #eee;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to KTU GPA Tools</h1>
-  <a href="https://ktugpa.github.io/KTU2024Scheme/" class="button">Go to 2024 Scheme Calculator</a>
+  <h1>KTU 2024 SCHEME</h1>
+  <p>SGPA / CGPA CALCULATOR</p>
+
+  <div class="scheme-select">
+    <label for="scheme">Select Your Scheme:</label><br><br>
+    <select id="scheme">
+      <option value="2024">2024 Scheme</option>
+      <option disabled>More Coming Soon...</option>
+    </select>
+  </div>
+
+  <button class="enter-button" onclick="enterCalculator()">Enter Calculator</button>
+
+  <footer>
+    Developed by KTU GPA Tools | © 2025
+  </footer>
+
+  <script>
+    function enterCalculator() {
+      const selected = document.getElementById("scheme").value;
+      if (selected === "2024") {
+        window.location.href = "https://ktugpa.github.io/KTU2024Scheme/";
+      }
+    }
+  </script>
 </body>
 </html>
