@@ -18,7 +18,7 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      background: linear-gradient(135deg, #1a2980, #26d0ce);
       color: #fff;
       min-height: 100vh;
       display: flex;
@@ -28,72 +28,75 @@
       text-align: center;
       padding: 20px;
     }
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+    }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 10px;
     }
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 30px;
-    }
-    .scheme-select {
-      margin-bottom: 20px;
-    }
-    .scheme-select select {
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      color: #333;
+      opacity: 0.9;
     }
     .enter-button {
-      padding: 14px 28px;
+      padding: 15px 40px;
       background-color: #ffffff;
-      color: #00aaff;
+      color: #1a2980;
       border: none;
-      border-radius: 30px;
-      font-size: 1rem;
+      border-radius: 50px;
+      font-size: 1.1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s ease, color 0.3s ease;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     .enter-button:hover {
-      background-color: #e0e0e0;
-      color: #0077cc;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
-    footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #eee;
+    .enter-button:active {
+      transform: translateY(1px);
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+    }
+    .logo span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1a2980;
     }
   </style>
 </head>
 <body>
-  <h1>KTU 2024 SCHEME</h1>
-  <p>SGPA / CGPA CALCULATOR</p>
-
-  <div class="scheme-select">
-    <label for="scheme">Select Your Scheme:</label><br><br>
-    <select id="scheme">
-      <option value="2024">2024 Scheme</option>
-      <option disabled>More Coming Soon...</option>
-    </select>
+  <div class="container">
+    <div class="logo">
+      <span>K</span>
+    </div>
+    <h1>KTU 2024 SCHEME</h1>
+    <p>SGPA / CGPA CALCULATOR</p>
+    <button class="enter-button" onclick="enterCalculator()">GET STARTED</button>
   </div>
-
-  <button class="enter-button" onclick="enterCalculator()">Enter Calculator</button>
-
-  <footer>
-    Developed by KTU GPA Tools | © 2025
-  </footer>
 
   <script>
     function enterCalculator() {
-      const selected = document.getElementById("scheme").value;
-      if (selected === "2024") {
-        window.location.href = "https://ktugpa.github.io/KTU2024Scheme/";
-      }
+      window.location.href = "https://ktugpa.github.io/KTU2024Scheme/";
     }
   </script>
 </body>
