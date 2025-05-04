@@ -66,28 +66,30 @@
     .enter-button:active {
       transform: translateY(1px);
     }
-    .logo {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
-      background-color: white;
+    .logo-circle {
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
+      margin: 0 auto 25px;
+      overflow: hidden;
+      border: 3px solid white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 25px;
+      background-color: white;
     }
-    .logo span {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #1a2980;
+    .logo-circle img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <span>K</span>
+    <div class="logo-circle">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/3f/APJ_Abdul_Kalam_Technological_University_Logo.png" alt="KTU Logo">
     </div>
     <h1>KTU 2024 SCHEME</h1>
     <p>SGPA / CGPA CALCULATOR</p>
